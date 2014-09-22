@@ -1,0 +1,30 @@
+<div id="home">
+    <div class="row well">
+        <form class="form-horizontal col-md-12" role="form">
+            <label for="txt-search" class="control-label">Blog Name</label>
+            <div>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" id="txt-search" ng-model="blog.url">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit" ng-click="searchBlog(blog)"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="col-md-12">
+            <div ng-repeat="tumblr in tumblrReponse.posts">
+                <div ng-if="tumblr.title || tumblr.photos">
+                    <h3>{{tumblr.title != null && tumblr.title || 'No Title'}}</h3>
+                    <span>{{convertDate(tumblr.date)}}</span>
+                    <div ng-repeat="photo in tumblr.photos">
+                        <img ng-src="{{photo.original_size.url}}" style="margin-bottom:20px; max-width: 100%;" />
+                    </div>
+                    <hr />
+                </div>
+            </div>
+        </div>
+        <p class="text-danger text-center" style="font-size: 18px;">{{error}}</p>
+    </div>
+</div>
+
+

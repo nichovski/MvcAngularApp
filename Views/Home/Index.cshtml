@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="app" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href="~/AngularApp/content/plugins/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body ng-controller="MainController">
+    <div class="container">
+        <h1 class="text-center">Cirqle Test AngularJS</h1>
+        <ng-view></ng-view>
+    </div>
+
+    <!--JS Libraries-->
+    <script src="~/AngularApp/scripts/angular/angular.min.js"></script>
+    <script src="~/AngularApp/scripts/angular/angular-route.min.js"></script>
+    <script src="~/AngularApp/scripts/angular/angular-touch.min.js"></script>
+    <script src="~/AngularApp/scripts/angular/angular-animate.min.js"></script>
+    <script src="~/AngularApp/scripts/angular/angular-resource.min.js"></script>
+    <script src="~/AngularApp/scripts/angular/angular-cookies.min.js"></script>
+
+    <script src="~/AngularApp/scripts/moment.js"></script>
+
+    <script src="~/AngularApp/scripts/app.js"></script>
+    <script src="~/AngularApp/scripts/config.routes.js"></script>
+
+    <!--Controllers-->
+    <script src="~/AngularApp/controllers/main-controller.js"></script>
+    <script src="~/AngularApp/controllers/home-controller.js"></script>
+
+    <!--Controllers-->
+    <script src="~/AngularApp/repositories/tumblr-repository.js"></script>
+</body>
+</html>
